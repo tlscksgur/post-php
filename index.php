@@ -10,11 +10,17 @@ require_once 'db.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css?v=<?php time() ?>">
 	<title>Document</title>
+
+	<script>
+		function goPost(e){
+			console.log(e.id);
+			location.href = `clickpage.php?idx=${e.id}`
+}
+	</script>
 </head>
 <body>
 <div class="container">
 	<form action="page.php" method='post'>
-		<!-- <input type="name" name='name'> -->
 		<button type='submit' class='storybtn'>게시물 작성</button>
 	</form>
 		<div class="content">
@@ -25,12 +31,14 @@ require_once 'db.php';
 					<li>content</li>
 				</ul>
 			</div>
+			<div>
+			</div>
 			<div class="contentbody">
 				<?php foreach($users as $key => $value): ?>
-					<ul>
-						<li><?= $value->title ?></li>
-						<li><?= $value->content ?></li>
-						<li><?= $value->name ?></li>
+					<ul id="<?= $value-> idx ?>" onclick="goPost(this)">
+						<li class="title"><?= $value->title ?></li>
+						<li class="content"><?= $value->content ?></li>
+						<li class="name"><?= $value->name ?></li>
 						<li><?= $value->date ?></li>
 						<li>
 							<form action="del.php" method="post">

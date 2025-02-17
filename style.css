@@ -1,5 +1,3 @@
-.mr150{margin-right: 150px;}
-
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +11,8 @@
     width: 50%;
     margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .25);
     border-radius: 10px;
     background-color: white;
 }
