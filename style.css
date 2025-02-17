@@ -1,0 +1,32 @@
+.mr150{margin-right: 150px;}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.head{width: 700px;}
+.head ul{display: flex; justify-content: space-around;}
+
+.contentbody{width: 715px; }
+.contentbody ul{display: flex; justify-content: space-around; position: relative; padding: 15px; border: 1px solid; border-radius: 5px; line-height: 5px; margin-top: 10px;}
+
+/* 포지션주면 예쁘긴한데 긴거 못씀 */
+.contentbody ul li:nth-child(1){position: absolute; left: 97px;}
+.contentbody ul li:nth-child(2){position: absolute; left: 328px;}
+.contentbody ul li:nth-child(3){position: absolute; right: 110px;}
+.contentbody ul li:nth-child(4){position: absolute; right: 50px; font-size: 10px;}
+.contentbody ul li:nth-child(5){position: absolute; right: 15px; bottom: 7px;}
