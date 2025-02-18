@@ -19,9 +19,14 @@
 
 .head{width: 700px;}
 .head ul{display: flex; justify-content: space-around;}
+.head > ul li{font-size: 18px;}
 
-.contentbody{width: 715px; }
-.contentbody ul{display: flex; justify-content: space-around; position: relative; padding: 15px; border: 1px solid; border-radius: 5px; line-height: 5px; margin-top: 10px;}
+.contentbody{width: 715px;}
+.contentbody > ul li:nth-child(3){overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100px; height: 20px;}
+.contentbody ul{display: flex; justify-content: space-around; position: relative; padding: 15px; border: 1px solid; border-radius: 5px; /* line-height: 5px; */ margin-top: 10px;}
+.contentbody ul:hover{cursor: pointer;}
+.contentbody ul li{margin-top: -6px;}
+
 
 /* 포지션주면 예쁘긴한데 긴거 못씀 */
 .contentbody ul li:nth-child(1){position: absolute; left: 97px;}

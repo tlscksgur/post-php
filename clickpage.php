@@ -22,7 +22,7 @@ $users = DB::fetchAll("SELECT * FROM post WHERE idx = $idx");
         color: inherit;
         box-sizing: border-box;
     }
-    .container{width: 50%; margin: 0 auto; border: 1px solid black;}
+    .container{width: 50%; margin: 0 auto; border: 1px solid black; border-radius: 5px;}
     
     .container > ul li {
         padding: 10px;
@@ -32,15 +32,21 @@ $users = DB::fetchAll("SELECT * FROM post WHERE idx = $idx");
 <div class="container">
 <?php foreach($users as $key => $value): ?>
             <ul id="<?= $value-> idx ?>" onclick="goPost(this)">
-                <li><strong>이름: </strong><?= $value->title ?></li>
-                <li><strong>제목: </strong><?= $value->content ?></li>
-                <li><strong>내용: </strong><?= $value->name ?></li>
+                <li><strong>이름: </strong><?= $value->name ?></li>
+                <li><strong>제목: </strong><?= $value->title ?></li>
+                <li><strong>내용: </strong><?= $value->content ?></li>
                 <li><?= $value->date ?></li>
                 <li>
                     <form action="del.php" method="post">
                         <input type="hidden" name="idx" value="<?= $value->idx ?>">
                         <button type="submit">삭제</button>
                     </form>
+                </li>
+                <li>
+                <form action="input.php" method="post">
+                    <input type="hidden" name="idx" value="<?= $value->idx ?>">
+                    <button type="submit">수정</button>
+                </form>
                 </li>
                 <li>
                 <form action="quit.php" method='post'>

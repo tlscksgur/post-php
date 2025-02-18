@@ -13,7 +13,6 @@ require_once 'db.php';
 
 	<script>
 		function goPost(e){
-			console.log(e.id);
 			location.href = `clickpage.php?idx=${e.id}`
 }
 	</script>
@@ -36,9 +35,9 @@ require_once 'db.php';
 			<div class="contentbody">
 				<?php foreach($users as $key => $value): ?>
 					<ul id="<?= $value-> idx ?>" onclick="goPost(this)">
+						<li class="name"><?= $value->name ?></li>
 						<li class="title"><?= $value->title ?></li>
 						<li class="content"><?= $value->content ?></li>
-						<li class="name"><?= $value->name ?></li>
 						<li><?= $value->date ?></li>
 						<li>
 							<form action="del.php" method="post">
