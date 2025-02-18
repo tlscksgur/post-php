@@ -28,5 +28,4 @@ class DB{
 	}
 }
 
-
 $users = DB::fetchAll('select * from post');

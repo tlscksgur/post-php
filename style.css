@@ -22,6 +22,8 @@
 .head > ul li{font-size: 18px;}
 
 .contentbody{width: 715px;}
+.contentbody > ul li:nth-child(1){overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 200px; height: 20px;}
+.contentbody > ul li:nth-child(2){overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 135px; height: 20px;}
 .contentbody > ul li:nth-child(3){overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100px; height: 20px;}
 .contentbody ul{display: flex; justify-content: space-around; position: relative; padding: 15px; border: 1px solid; border-radius: 5px; /* line-height: 5px; */ margin-top: 10px;}
 .contentbody ul:hover{cursor: pointer;}
