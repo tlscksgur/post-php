@@ -31,7 +31,7 @@ $users = DB::fetchAll("SELECT * FROM post WHERE idx = $idx");
 <body>
 <div class="container">
 <?php foreach($users as $key => $value): ?>
-            <ul id="<?= $value-> idx ?>" onclick="goPost(this)">
+            <ul id="<?= $value-> idx ?>">
                 <li><strong>이름: </strong><?= $value->name ?></li>
                 <li><strong>제목: </strong><?= $value->title ?></li>
                 <li><strong>내용: </strong><?= $value->content ?></li>

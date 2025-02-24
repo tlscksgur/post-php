@@ -1,5 +1,9 @@
 <?php
 require_once 'db.php';
+session_start();
+if ($_SESSION['ss']) {
+	echo '로그인성공';
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,16 +12,25 @@ require_once 'db.php';
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css?v=<? time()?>">
 	<title>Document</title>
 
 	<script>
 		function goPost(e){
 			location.href = `clickpage.php?idx=${e.id}`
-}
+		}
 	</script>
 </head>
 <body>
+<?php session_start(); ?>
+<div class="login">
+    <?php if ($_SESSION['ss'] ?? false): ?>
+        <a href="signout.php" class="out">로그아웃</a>
+    <?php else: ?>
+        <a href="loginshow.php" class="in">로그인</a>
+        <a href="joinshow.php" class="join">회원가입</a>
+    <?php endif; ?>
+</div>
 <div class="container">
 	<form action="page.php" method='post'>
 		<button type='submit' class='storybtn'>게시물 작성</button>

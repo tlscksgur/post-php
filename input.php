@@ -8,7 +8,7 @@
 <body>
     <form action="correction.php" method="post">
         <input type="hidden" name="idx" value="<?= $_POST['idx']?>">
-        <input type=" text" name="n" placeholder="이름 수정하기" style="border: 1px solid black;">
+        <input type="text" name="n" placeholder="이름 수정하기" style="border: 1px solid black;">
         <input type="text" name="t" placeholder="제목 수정하기" style="border: 1px solid black;">
         <input type="text" name="c" placeholder="내용 수정하기" style="border: 1px solid black;">
         <button type="submit">수정완료</button>

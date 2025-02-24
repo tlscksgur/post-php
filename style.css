@@ -36,3 +36,11 @@
 .contentbody ul li:nth-child(3){position: absolute; right: 110px;}
 .contentbody ul li:nth-child(4){position: absolute; right: 50px; font-size: 10px;}
 .contentbody ul li:nth-child(5){position: absolute; right: 15px; bottom: 7px;}
+
+.out{width: 90px; height: 50px; border: 1px solid; border-radius: 5px; transition: .2s;}
+.out:hover{background-color: rgb(255, 65, 65);}
+.login{margin-top: 20px; margin-left: 5px;}
+.in{width: 90px; height: 50px; border: 1px solid; border-radius: 5px; transition: .2s;}
+.in:hover{background-color: aquamarine;}
+.join{width: 90px; height: 50px; border: 1px solid; border-radius: 5px; transition: .2s;}
+.join:hover{background-color: aquamarine;}

@@ -29,3 +29,7 @@ class DB{
 }
 
 $users = DB::fetchAll('select * from post');
+
+function ss() {
+	return $_SESSION['ss'] ?? false;
+}
