@@ -2,7 +2,7 @@
 require_once 'db.php';
 session_start();
 if ($_SESSION['ss']) {
-	echo '로그인성공';
+	echo '로그인완료 id: ' . $_SESSION['ss']->id;
 }
 ?>
 
@@ -12,7 +12,7 @@ if ($_SESSION['ss']) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css?v=<? time()?>">
+	<link rel="stylesheet" href="style.css">
 	<title>Document</title>
 
 	<script>
@@ -32,9 +32,14 @@ if ($_SESSION['ss']) {
     <?php endif; ?>
 </div>
 <div class="container">
-	<form action="page.php" method='post'>
-		<button type='submit' class='storybtn'>게시물 작성</button>
-	</form>
+	<div class="btnbox">
+		<form action="page.php" method='post'>
+			<button type='submit' class='storybtn'>게시물 작성</button>
+		</form>
+		<form action="file.php" method='post'>
+			<button type='submit' class="">파일 업로드</button>
+		</form>
+	</div>
 		<div class="content">
 			<div class="head">
 				<ul>
