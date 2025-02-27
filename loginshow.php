@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="login.php" method="post">
-        <input type="text" name="idlg" placeholder="id" required>
+        <input type="text" name="idlg" placeholder="id" autofocus required>
         <input type="password" name="pwlg" placeholder="pw" required>
         <button type="submit">로그인</button>
     </form>

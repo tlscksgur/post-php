@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-
+    
 <form action="create.php" method="post">
-    <input type="text" name='name' placeholder='이름' style="border: 1px solid black;">
-    <input type="text" name='title' placeholder='제목' style="border: 1px solid black;">
-    <input type="text" name='content' placeholder='내용' style="border: 1px solid black;">
+    <textarea type="text" name='name' autofocus placeholder='이름' class="border"></textarea>
+    <textarea type="text" name='title' placeholder='제목' class="border"></textarea>
+    <textarea type="text" name='content' placeholder='내용' class="border"></textarea>
     <button type="submit">만들기</button>
 </form>
 <form action="quit.php" method='post'>

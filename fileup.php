@@ -1,7 +1,6 @@
 <?php
 require_once "db.php";
 
-$test = $_POST['file'];
 $file = $_FILES["file"]["name"];
 
 echo $_FILES["file"]["name"];
@@ -18,8 +17,8 @@ move_uploaded_file($_FILES["file"]["tmp_name"] , "upload/" .$file );
 </head>
 <style></style>
 <body>
-<div class="container">
-    <a href="./upload/<?php $_FILES["file"]["tmp_name"] ?>">올림</a>
+    <div class="container">
+        <a href="./upload/<?php echo $file; ?>">올림</a>
     </div>
 </body>
 </html>

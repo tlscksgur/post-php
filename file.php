@@ -8,7 +8,7 @@
 <body>
     <form action="fileup.php" method="post" enctype="multipart/form-data">
         <input type="file" name="file">
-        <button type="submit">올리기</button>
+        <button type="submit">업로드</button>
     </form>
 </body>
 </html>

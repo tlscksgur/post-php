@@ -1,3 +1,11 @@
+<?php
+require_once 'db.php';
+
+$idx = $_POST['idx'];
+
+$writing = DB::fetch("SELECT * FROM post WHERE idx=$idx");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +16,9 @@
 <body>
     <form action="correction.php" method="post">
         <input type="hidden" name="idx" value="<?= $_POST['idx']?>">
-        <input type="text" name="n" placeholder="이름 수정하기" style="border: 1px solid black;">
-        <input type="text" name="t" placeholder="제목 수정하기" style="border: 1px solid black;">
-        <input type="text" name="c" placeholder="내용 수정하기" style="border: 1px solid black;">
+        <input type="text" name="n" value="<?= $writing->name ?>" autofocus placeholder="이름 수정하기" class="border">
+        <input type="text" name="t" value="<?= $writing->title ?>" placeholder="제목 수정하기" class="border">
+        <input type="text" name="c" value="<?= $writing->content ?>" placeholder="내용 수정하기" class="border">
         <button type="submit">수정완료</button>
     </form>
     <form action="quit.php" method="post">

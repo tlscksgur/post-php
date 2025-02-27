@@ -1,3 +1,3 @@
 <?php
-header("Location: index.php"); 
+echo "<script>location.href='/'</script>"; 
 exit();

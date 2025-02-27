@@ -7,6 +7,9 @@
     box-sizing: border-box;
 }
 
+.border{border: 1px solid black;}
+.opacity{opacity: .6; pointer-events: none;}
+
 .container {
     width: 50%;
     margin: 50px auto;
@@ -30,7 +33,7 @@
 .contentbody ul li{margin-top: -6px;}
 
 
-/* 포지션주면 예쁘긴한데 긴거 못씀 */
+/* 포지션으로 줘서 UI깨짐*/
 .contentbody ul li:nth-child(1){position: absolute; left: 97px;}
 .contentbody ul li:nth-child(2){position: absolute; left: 328px;}
 .contentbody ul li:nth-child(3){position: absolute; right: 110px;}
