@@ -25,8 +25,8 @@ if ($_SESSION['ss']) {
     <?php if ($_SESSION['ss'] ?? false): ?>
         <a href="/logout" class="out">로그아웃</a>
     <?php else: ?>
-        <a href="/login" class="in">로그인</a>
-        <a href="/join" class="join">회원가입</a>
+        <a href="/loginmove" class="in">로그인</a>
+        <a href="/joinmove" class="join">회원가입</a>
     <?php endif; ?>
 </div>
 <div class="container">

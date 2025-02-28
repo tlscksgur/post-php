@@ -1,6 +1,4 @@
 <?php
-// require_once "db.php";
-// session_start();
 
 $idlg = $_POST['idlg'];
 $pwlg = $_POST['pwlg'];

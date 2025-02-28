@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="join.php" method="post">
+    <form action="/join" method="post">
         <input type="text" name="id" placeholder="id" required>
         <input type="password" name="pw" placeholder="pw" required>
         <button type="submit">회원가입하기</button>

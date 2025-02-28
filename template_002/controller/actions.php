@@ -18,10 +18,13 @@ POST('/file', function(){
 });
 
 POST("/create", function(){
-    views('cf/create', [...$_POST]);
+    views('cf/create');
 });
-
 
 POST("/lologin", function(){
     views('cf/login');
+});
+
+POST("/join", function(){
+    views('cf/join', [...$_POST]);
 });

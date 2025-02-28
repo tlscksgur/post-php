@@ -3,10 +3,10 @@ GET("/index", function(){
     views('vf/index');
 });
 
-GET("/login", function(){
+GET("/loginmove", function(){
     views('vf/loginshow');
 });
-GET("/join", function(){
+GET("/joinmove", function(){
     views('vf/joinshow');
 });
 GET("/input", function(){
