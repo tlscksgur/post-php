@@ -21,7 +21,7 @@ $writing = DB::fetch("SELECT * FROM post WHERE idx=$idx");
         <input type="text" name="c" value="<?= $writing->content ?>" placeholder="내용 수정하기" class="border">
         <button type="submit">수정완료</button>
     </form>
-    <form action="quit.php" method="post">
+    <form action="/index" method="post">
         <button type="submit">취소</button>
     </form>
 </body>

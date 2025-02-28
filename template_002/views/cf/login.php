@@ -1,11 +1,13 @@
 <?php
-require_once "db.php";
-session_start();
+// require_once "db.php";
+// session_start();
 
 $idlg = $_POST['idlg'];
 $pwlg = $_POST['pwlg'];
 
+
 $idpw = DB::fetch("SELECT * FROM users WHERE id='$idlg'");
+
 
 if ($idpw && $idpw->pw === $pwlg) {
     $_SESSION['ss'] = $idpw;
@@ -13,7 +15,7 @@ if ($idpw && $idpw->pw === $pwlg) {
 } else {
     echo "<script>
             alert('로그인 실패');
-            location.href='loginshow.php'
+            location.href='/vf/index';
         </script>";
 };
-?>'
+?>

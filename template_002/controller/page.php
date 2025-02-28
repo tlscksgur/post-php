@@ -1,18 +1,19 @@
 <?php
-
-GET("/",function(){
-    views('home');
-    // views("users/profile",[...$_GET]);
+GET("/index", function(){
+    views('vf/index');
 });
 
-GET("/users/profile",function(){
-    views("users/profile",[...$_GET]);
+GET("/login", function(){
+    views('vf/loginshow');
+});
+GET("/join", function(){
+    views('vf/joinshow');
+});
+GET("/input", function(){
+    views('vf/input');
 });
 
-GET("/vf/index", function(){
-    views("vf/index",[...$_GET]);
-});
 
-get('/login', function() {
-    views('users/login');
+GET("/logout", function(){
+    views('cf/signout');
 });

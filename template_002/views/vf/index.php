@@ -1,6 +1,4 @@
 <?php
-require_once 'db.php';
-session_start();
 if ($_SESSION['ss']) {
 	echo '로그인완료 id: ' . $_SESSION['ss']->id;
 }
@@ -12,8 +10,8 @@ if ($_SESSION['ss']) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./style.css?v=<?php time();?>">
 	<title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 
 	<script>
 		function goPost(e){
@@ -22,21 +20,21 @@ if ($_SESSION['ss']) {
 	</script>
 </head>
 <body>
-<?php session_start(); ?>
+
 <div class="login">
     <?php if ($_SESSION['ss'] ?? false): ?>
-        <a href="signout.php" class="out">로그아웃</a>
+        <a href="/logout" class="out">로그아웃</a>
     <?php else: ?>
-        <a href="loginshow.php" class="in">로그인</a>
-        <a href="joinshow.php" class="join">회원가입</a>
+        <a href="/login" class="in">로그인</a>
+        <a href="/join" class="join">회원가입</a>
     <?php endif; ?>
 </div>
 <div class="container">
 	<div class="btnbox">
-		<form action="page.php" method='post'>
+		<form action="/page" method='post'>
 			<button type='submit' class='storybtn'>게시물 작성</button>
 		</form>
-		<form action="file.php" method='post'>
+		<form action="/file" method='post'>
 			<button type='submit' class="">파일 업로드</button>
 		</form>
 	</div>

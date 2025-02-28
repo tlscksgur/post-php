@@ -11,6 +11,6 @@
         <input type="password" name="pw" placeholder="pw" required>
         <button type="submit">회원가입하기</button>
     </form>
-    <a href="quit.php">나가기</a>
+    <a href="/index">나가기</a>
 </body>
 </html>

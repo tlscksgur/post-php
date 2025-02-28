@@ -12,7 +12,7 @@ $users = DB::fetchAll("SELECT * FROM post WHERE idx = $idx");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css?v=<?php time();?>">
+    <link rel="stylesheet" href="/template_002/model/style.css">
 </head>
 <style>
     .container{width: 50%; margin: 0 auto; border: 1px solid black; border-radius: 5px;}

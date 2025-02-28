@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +11,14 @@
 </head>
 <body>
     
-<form action="create.php" method="post">
+<form action="create" method="post">
+    <!-- <input type="hidden" name="idx" value="<?php $_POST["idx"] ?>"> -->
     <textarea type="text" name='name' autofocus placeholder='이름' class="border"></textarea>
     <textarea type="text" name='title' placeholder='제목' class="border"></textarea>
     <textarea type="text" name='content' placeholder='내용' class="border"></textarea>
-    <button type="submit">만들기</button>
+    <input type="submit" value="보내기">
 </form>
-<form action="quit.php" method='post'>
-    <button type="submit">나가기</button>
-</form>
+
+
 </body>
 </html>

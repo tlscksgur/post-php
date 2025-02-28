@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="login.php" method="post">
+    <form action="/lologin" method="post">
         <input type="text" name="idlg" placeholder="id" autofocus required>
         <input type="password" name="pwlg" placeholder="pw" required>
-        <button type="submit">로그인</button>
+        <input type="submit" value="로그인">
     </form>
-    <a href="quit.php">나가기</a>
+    <a href="/index">나가기</a>
 </body>
 </html>
