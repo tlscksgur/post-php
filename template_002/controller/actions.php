@@ -6,4 +6,3 @@ POST("/users/profile",function(){
     extract($_POST);
     echo $id;
 });
-
